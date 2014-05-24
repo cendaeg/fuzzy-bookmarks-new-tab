@@ -1,0 +1,35 @@
+.followedStories {
+	margin-top: 12px;
+	padding-top: 12px;
+	border-top: 1px solid #c3c9d2;
+    width:200px;
+    float:right;
+    font: 13px/25px "Whitney SSm A","Whitney SSm B","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+}
+
+.followedStories div {
+    height:50%;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+
+.followedStories hr {
+    clear:both;
+}
+
+.followedStories a {
+    color: #5f6979;
+}
+
+.FollowRemove {
+    float:right !important;
+    padding:0 !important;
+    margin:0 5px -20px 0 !important;
+}
+
+.CommentLink {
+    float:right;
+    color:#DBBB30 !important;
+    text-decoration:none !important;
+    padding:0 5px;
+}
