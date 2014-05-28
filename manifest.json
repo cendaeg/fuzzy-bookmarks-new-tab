@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "BetterDN",
+    "description": "Add features to Designer News",
+    "version": "1.2",
+    "icons": {
+        "128": "img/logo.png" 
+    },
+    "permissions": [
+        "tabs",
+        "notifications",
+        "https://news.layervault.com/*"
+    ],
+    "content_scripts": [
+    { 
+        "matches": [
+            "https://news.layervault.com/*"
+        ],
+        "css": [
+            "css/dn.css"
+        ],
+        "js": [
+            "js/lib/jquery-2.1.0.min.js",
+            "js/lib/marked.min.js",
+            "js/comments.js",
+            "js/editor.js",
+            "js/follow.js", 
+            "js/general.js", 
+            "js/pocket.js", 
+            "js/unvisited.js",
+            "js/upvotes.js",
+            "js/url.js"
+            ]
+        }
+    ]
+}
