@@ -12,24 +12,50 @@
         "https://news.layervault.com/*"
     ],
     "content_scripts": [
-    { 
-        "matches": [
-            "https://news.layervault.com/*"
-        ],
-        "css": [
-            "css/dn.css"
-        ],
-        "js": [
-            "js/lib/jquery-2.1.0.min.js",
-            "js/lib/marked.min.js",
-            "js/comments.js",
-            "js/editor.js",
-            "js/follow.js", 
-            "js/general.js", 
-            "js/pocket.js", 
-            "js/unvisited.js",
-            "js/upvotes.js",
-            "js/url.js"
+        { 
+            "matches": [
+                "https://news.layervault.com/*"
+            ],
+            "css": [
+                "css/dn.css"
+            ],
+            "js": [
+
+                "js/lib/jquery-2.1.0.min.js",
+                "js/lib/marked.min.js",
+                "js/preview/preview.js",
+                "js/comments.js",
+                "js/editor.js",
+                "js/follow.js", 
+                "js/general.js", 
+                "js/pocket.js", 
+                "js/unvisited.js",
+                "js/upvotes.js",
+                "js/url.js" 
+            ]
+        },
+        {
+            "matches": [
+                "https://news.layervault.com/comments/*"
+            ],
+            "js": [
+                "js/preview/preview-comment.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://news.layervault.com/stories/*"
+            ],
+            "js": [
+                "js/preview/preview-story.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://news.layervault.com/submit"
+            ],
+            "js": [
+                "js/preview/preview-submit.js"
             ]
         }
     ]
