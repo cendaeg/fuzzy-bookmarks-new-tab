@@ -1,7 +1,7 @@
 function updateStories() {
 	$(".followedStories").remove();
 	$("#Navigation").append("<div class='followedStories'>Followed Stories<br /><div></div></div>");
-	var followedStories = JSON.parse(localStorage.getItem('followed-posts'));
+	var followedStories = JSON.parse(localStorage.getItem('followed-posts')) || [];
 	for(i=0;i<followedStories.length;i++){
 		$(".followedStories div").append("<a href='#' class='FollowRemove'>\u2716</a><a href='"+followedStories[i].url+"' class='FollowedLink'>"+followedStories[i].title+"</a><hr />");
 	}
