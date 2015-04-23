@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "BetterDN",
     "description": "Add features to Designer News",
-    "version": "2.0",
+    "version": "2.1",
     "icons": {
         "128": "img/logo.png"
     },
