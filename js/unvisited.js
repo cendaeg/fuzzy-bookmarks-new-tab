@@ -11,7 +11,7 @@ $(function() {
 		} else if(e.keyCode == 91){
 			modifier.cmd = true;
 		}
-		if(modifer!=undefined && (modifier.cmd || modifer.ctrl) && modifier.shift && e.keyCode == 79) {
+		if(modifier!==undefined && (modifier.cmd || modifier.ctrl) && modifier.shift && e.keyCode == 79) {
 			if(confirm("Are you sure you want to open all unvisited links?")) {
 				$('.StoryUrl').each(function(){
 					if(!localStorage.getItem($(this).html())){

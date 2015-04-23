@@ -1,4 +1,4 @@
-$(".Comment img").each(function() {
+$("img").each(function() {
   var url = $(this).attr("src");
   if(url.indexOf("https://camo.layervault.com")>-1) {
     var urlParams = url.split("=");

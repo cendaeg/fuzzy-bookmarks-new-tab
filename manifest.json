@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "BetterDN",
     "description": "Add features to Designer News",
-    "version": "1.2",
+    "version": "2.0",
     "icons": {
         "128": "img/logo.png"
     },
@@ -28,7 +28,6 @@
                 "js/editor.js",
                 "js/follow.js",
                 "js/general.js",
-                //"js/pocket.js",
                 "js/unvisited.js",
                 "js/upvotes.js",
                 "js/url.js",

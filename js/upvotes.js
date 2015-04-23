@@ -15,8 +15,6 @@ $(function() {
 		$(".InnerPage > ol").before("<a href='#' class='unsort'>Sort page by natural order</a>");
 	}
 	function sort() {
-	
-			console.log();
 			var storyWrap = $(".InnerPage ol");
 			var children = storyWrap.children(".Story").detach();
 			children.sort(function(a, b) {
