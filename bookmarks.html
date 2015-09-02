@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-csp ng-app="bookmarks">
+<head>
+  <title>New Tab</title>
+  <style>
+  * {
+    box-sizing:border-box;
+  }
+    html, body {
+      color:#222;
+      padding:0;
+      margin:0;
+      font-family:sans-serif;
+      font-size:18px;
+      font-weight:300;
+    }
+    .search {
+      margin:0 0 2%;
+    }
+    .search input {
+      width:100%;
+      margin:0;
+      font-size:5em;
+      background:none;
+      border:none;
+      outline:none;
+      padding:2% 5%;
+    }
+    ul {
+      list-style:none;
+      margin:0;
+      padding:0 5%;
+    }
+    .bookmark {
+      display:block;
+      width:100%;
+      padding:2% 0;
+      margin:0 5%;
+      border-bottom:1px solid #c1c1c1;
+    }
+    .title {
+      display:block;
+      font-size:1.25rem;
+      padding:2%;
+    }
+    .folders > .title {
+      font-size:2em;
+      padding:1% 0;
+    }
+  </style>
+</head>
+<body ng-controller="BookmarksCtrl as vm">
+  <div class="search">
+    <input type="text" ng-model="search.$" placeholder="Search..." autofocus/>
+  </div>
+  <script type="text/ng-template" id="field_renderer.html">
+    <span class="title" ng-if="data.children.length>0">{{data.title}}</span>
+    <a class="bookmark" ng-if="!data.children" href='{{data.url}}'>{{data.title}}</a>
+    <ul class="children">
+      <li ng-repeat="data in data.children | filter:search:strict" ng-include="'field_renderer.html'"></li>
+    </ul>
+  </script>
+
+  <ul>
+    <li class="folders" ng-repeat="data in vm.tree.children | filter:search:strict" ng-include="'field_renderer.html'"></li>
+  </ul>
+  <script src="angular.min.js"></script>
+  <script src="bookmarks.js"></script>
+</body>
+</html>
